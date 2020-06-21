@@ -1,0 +1,392 @@
+c ------------------------------------------------------------------------------
+c
+c   CELL CARDS
+c
+c ------------------------------------------------------------------------------
+1 0 999                                     IMP:N,P=0
+2 2 -1.205e-3 -999
+          #100 #110 #120 #130 #140 #150 #160 #170     $ Detectors
+          #101 #111 #121 #131 #141 #151 #161 #171     $ Detectors
+          #102 #112 #122 #132 #142 #152 #162 #172     $ Detectors
+          #103 #113 #123 #133 #143 #153 #163 #173     $ Detectors
+          #104 #114 #124 #134 #144 #154 #164 #174     $ Detectors
+          #105 #115 #125 #135 #145 #155 #165 #175     $ Detectors
+          #106 #116 #126 #136 #146 #156 #166 #176     $ Detectors
+          #107 #117 #127 #137 #147 #157 #167 #177     $ Detectors
+          #108 #118 #128 #138 #148 #158 #168 #178     $ Detectors
+          #109 #119 #129 #139 #149 #159 #169 #179     $ Detectors
+          #200 #210 #220 #230 #240 #250 #260 #270     $ Detectors
+c         #8001 #8002 #8003 #8004                     $ Uncomment this line for BeRP
+          #771 #772 $ #773
+      IMP:N,P=1 
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    BeRP Ball                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+c 8001    110 -19.60390   -801              imp:n=1   $ Pu Ball
+c 8002    2   -1.205e-3   801 -802          imp:n=1   $ gap between Pu Ball and cladding
+c 8003    120  -8.88688   802 -803          imp:n=1   $ SS 304 cladding spherical  
+c 8004    120  -8.88688   804 -805 803 -806 imp:n=1   $ SS 304 cladding flange
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    Composite Shielding                                                       
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+  771 71  -8.96         -71                IMP:N,P=1  $ Copper
+  772 72  -7.31         -72                IMP:N,P=1  $ Tin
+c  773 73 -11.35         -73                IMP:N,P=1  $ Lead
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    STILBENE Detectors                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c   Det #00
+100  13 -1.160  -15                TRCL=8  IMP:N,P=1       $ Stilbene
+101   5 -2.6989 -12   13           TRCL=8  IMP:N,P=1       $ Aluminum case
+102  19 -1.05  (-10   11):(11 -17 18):(-19 20 -21) 
+                                   TRCL=8  IMP:N,P=1       $ Plastic case
+103  15 -2.32   -14                TRCL=8  IMP:N,P=1       $ fused silica window
+104  11 -2.25    14   16  -13   15 TRCL=8  IMP:N,P=1       $ PTFE   
+105  16 -0.021  -16  -13           TRCL=8  IMP:N,P=1       $ open cell foam  
+106  17 -2.23  -22 23              TRCL=8  IMP:N,P=1       $ PMT Glass
+107   0        -23                 TRCL=8  IMP:N,P=1       $ Inside PMT
+108  10 -8.747  22 -24             TRCL=8  IMP:N,P=1       $ Mu-metal
+109  18 -1.19  -25                 TRCL=8  IMP:N,P=1       $ Bakelite base 
+200   0         (-11:-18) 12 24 25 TRCL=8  IMP:N,P=1       $ Void around PMT
+c   Det #01
+110  LIKE 100 BUT                  TRCL=1                  $ Stilbene
+111  LIKE 101 BUT                  TRCL=1                  $ Aluminum case
+112  LIKE 102 BUT                  TRCL=1                  $ Plastic case
+113  LIKE 103 BUT                  TRCL=1                  $ fused silica window
+114  LIKE 104 BUT                  TRCL=1                  $ PTFE   
+115  LIKE 105 BUT                  TRCL=1                  $ open cell foam  
+116  LIKE 106 BUT                  TRCL=1                  $ PMT Glass
+117  LIKE 107 BUT                  TRCL=1                  $ Inside PMT
+118  LIKE 108 BUT                  TRCL=1                  $ Mu-metal
+119  LIKE 109 BUT                  TRCL=1                  $ Bakelite base 
+210  LIKE 200 BUT                  TRCL=1                  $ Void around PMT
+c   Det #01
+120  LIKE 100 BUT                  TRCL=2                  $ Stilbene
+121  LIKE 101 BUT                  TRCL=2                  $ Aluminum case
+122  LIKE 102 BUT                  TRCL=2                  $ Plastic case
+123  LIKE 103 BUT                  TRCL=2                  $ fused silica window
+124  LIKE 104 BUT                  TRCL=2                  $ PTFE   
+125  LIKE 105 BUT                  TRCL=2                  $ open cell foam  
+126  LIKE 106 BUT                  TRCL=2                  $ PMT Glass
+127  LIKE 107 BUT                  TRCL=2                  $ Inside PMT
+128  LIKE 108 BUT                  TRCL=2                  $ Mu-metal
+129  LIKE 109 BUT                  TRCL=2                  $ Bakelite base 
+220  LIKE 200 BUT                  TRCL=2                  $ Void around PMT
+c   Det #01
+130  LIKE 100 BUT                  TRCL=3                  $ Stilbene
+131  LIKE 101 BUT                  TRCL=3                  $ Aluminum case
+132  LIKE 102 BUT                  TRCL=3                  $ Plastic case
+133  LIKE 103 BUT                  TRCL=3                  $ fused silica window
+134  LIKE 104 BUT                  TRCL=3                  $ PTFE   
+135  LIKE 105 BUT                  TRCL=3                  $ open cell foam  
+136  LIKE 106 BUT                  TRCL=3                  $ PMT Glass
+137  LIKE 107 BUT                  TRCL=3                  $ Inside PMT
+138  LIKE 108 BUT                  TRCL=3                  $ Mu-metal
+139  LIKE 109 BUT                  TRCL=3                  $ Bakelite base 
+230  LIKE 200 BUT                  TRCL=3                  $ Void around PMT
+c   Det #01
+140  LIKE 100 BUT                  TRCL=4                  $ Stilbene
+141  LIKE 101 BUT                  TRCL=4                  $ Aluminum case
+142  LIKE 102 BUT                  TRCL=4                  $ Plastic case
+143  LIKE 103 BUT                  TRCL=4                  $ fused silica window
+144  LIKE 104 BUT                  TRCL=4                  $ PTFE   
+145  LIKE 105 BUT                  TRCL=4                  $ open cell foam  
+146  LIKE 106 BUT                  TRCL=4                  $ PMT Glass
+147  LIKE 107 BUT                  TRCL=4                  $ Inside PMT
+148  LIKE 108 BUT                  TRCL=4                  $ Mu-metal
+149  LIKE 109 BUT                  TRCL=4                  $ Bakelite base 
+240  LIKE 200 BUT                  TRCL=4                  $ Void around PMT
+c   Det #01
+150  LIKE 100 BUT                  TRCL=5                  $ Stilbene
+151  LIKE 101 BUT                  TRCL=5                  $ Aluminum case
+152  LIKE 102 BUT                  TRCL=5                  $ Plastic case
+153  LIKE 103 BUT                  TRCL=5                  $ fused silica window
+154  LIKE 104 BUT                  TRCL=5                  $ PTFE   
+155  LIKE 105 BUT                  TRCL=5                  $ open cell foam  
+156  LIKE 106 BUT                  TRCL=5                  $ PMT Glass
+157  LIKE 107 BUT                  TRCL=5                  $ Inside PMT
+158  LIKE 108 BUT                  TRCL=5                  $ Mu-metal
+159  LIKE 109 BUT                  TRCL=5                  $ Bakelite base 
+250  LIKE 200 BUT                  TRCL=5                  $ Void around PMT
+c   Det #01
+160  LIKE 100 BUT                  TRCL=6                  $ Stilbene
+161  LIKE 101 BUT                  TRCL=6                  $ Aluminum case
+162  LIKE 102 BUT                  TRCL=6                  $ Plastic case
+163  LIKE 103 BUT                  TRCL=6                  $ fused silica window
+164  LIKE 104 BUT                  TRCL=6                  $ PTFE   
+165  LIKE 105 BUT                  TRCL=6                  $ open cell foam  
+166  LIKE 106 BUT                  TRCL=6                  $ PMT Glass
+167  LIKE 107 BUT                  TRCL=6                  $ Inside PMT
+168  LIKE 108 BUT                  TRCL=6                  $ Mu-metal
+169  LIKE 109 BUT                  TRCL=6                  $ Bakelite base 
+260  LIKE 200 BUT                  TRCL=6                  $ Void around PMT
+c   Det #01
+170  LIKE 100 BUT                  TRCL=7                  $ Stilbene
+171  LIKE 101 BUT                  TRCL=7                  $ Aluminum case
+172  LIKE 102 BUT                  TRCL=7                  $ Plastic case
+173  LIKE 103 BUT                  TRCL=7                  $ fused silica window
+174  LIKE 104 BUT                  TRCL=7                  $ PTFE   
+175  LIKE 105 BUT                  TRCL=7                  $ open cell foam  
+176  LIKE 106 BUT                  TRCL=7                  $ PMT Glass
+177  LIKE 107 BUT                  TRCL=7                  $ Inside PMT
+178  LIKE 108 BUT                  TRCL=7                  $ Mu-metal
+179  LIKE 109 BUT                  TRCL=7                  $ Bakelite base 
+270  LIKE 200 BUT                  TRCL=7                  $ Void around PMT
+
+c ------------------------------------------------------------------------------
+c
+c   SURFACE CARDS
+c
+c ------------------------------------------------------------------------------
+999 SO 1000                                 $ Event Horizon
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    BeRP Ball                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                 
+801 4 sz  -0.0365   3.7938                  $ Pu ball - mean diameter 75.876 mm 
+802 4 so   3.83032                          $ SS 304 cladding internal radius
+803 4 so   3.85572                          $ SS 304 cladding external radius
+c                                           
+804 4 pz  -0.04318                          $ SS 304 flange - lower surface
+805 4 pz   0.04318                          $ SS 304 flange - upper surface
+806 4 cz   4.37896                          $ SS 304 flange - radius
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    STILBENE Detectors                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                
+10 RCC  0 0 0     19.05 0 0    3.175        $ plastic case outer, guess 1mm thick
+11 RCC  0.05 0 0  19.2 0 0     3.075        $ plastic case inner
+12 RCC  0.05 0 0   6.35 0 0    2.9464       $ Aluminum case outer 0.07" thick
+13 RCC  0.2278 0 0 6.1722 0 0  2.7686       $ Aluminum case inner
+14 RCC  6.4 0 0   -0.16 0 0    2.7686       $ fused silica window 0.063"  
+15 RCC  6.24 0 0  -5.08 0 0    2.54         $ Stilbene cell
+16 PX   1.1092                              $ plane for PTFE assumed front face thickness of 0.02" 
+17 RCC 19.05 0 0  10.0 0 0     3.575        $ Back plastic case outer
+18 RCC 19.25 0 0   9.8 0 0     3.475        $ Back plastic case inner 
+19 PZ 3.575                                 $ plastic case flange cutout
+20 PZ -3.575                                $ plastic case flange cutout
+21 RCC 29.05 0 0   0.4 0 0     4.575        $ plastic case flange base
+22 RCC 6.4 0 0    13.3 0 0     2.575        $ PMT glass outer GUESS
+23 RCC 6.6 0 0    12.9 0 0     2.275        $ PMT glass inner GUESS
+24 RCC 6.4 0 0    13.3 0 0     2.625        $ Mu-metal 
+25 RCC 19.7 0 0    1.7 0 0     2.575        $ Bakelite PMT base GUESS
+c
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    Composite Shielding                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  71 RPP 49.99 50.00 -16.51 16.51 -16.51 16.51   $ Copper
+  72 RPP 49.98 49.99 -16.51 16.51 -16.51 16.51   $ Tin
+c  73 RPP 49.97 49.98 -16.51 16.51 -16.51 16.51   $ Lead
+c
+c
+
+c ------------------------------------------------------------------------------
+c
+c   DATA CARDS
+c
+c ------------------------------------------------------------------------------
+c
+c
+ MODE P
+ PHYS:P 0 1 1 
+ CUT:P 2J 0
+ SDEF POS = 0 0 0
+      AXS = 1 0 0 
+      EXT = 0
+      RAD = D1
+c      PAR = 2
+c      ERG = 0.06
+      VEC = 1 0 0
+      DIR = 1
+ SI1 0 4.5
+ SP1 -21 1
+ NPS 1e5
+ IPOL 3 1 2 0 J 1 8 100 110 120 130 140 150 160 170       
+ FILES 21 DUMN1                                                                
+ DBCN                                                                          
+  PRDMP 2J 1
+  LCA 8J 1    
+c
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    Translations                                                                  
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+TR8     50.00 -13.725 -3.5   1 0 0 0 1 0 0 0 1          $ TR0 w/r/t/ origin
+TR1     50.00 -13.725 4      1 0 0 0 1 0 0 0 1  
+TR2     50.00  -4.575 -3.5   1 0 0 0 1 0 0 0 1
+TR3     50.00  -4.575 4      1 0 0 0 1 0 0 0 1  
+TR4     50.00   4.575 -3.5   1 0 0 0 1 0 0 0 1
+TR5     50.00   4.575 4      1 0 0 0 1 0 0 0 1 
+TR6     50.00  13.725 -3.5   1 0 0 0 1 0 0 0 1
+TR7     50.00  13.725 4      1 0 0 0 1 0 0 0 1  
+c
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          
+c    Materials                                                                  
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~            
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c Air, Dry (near sea level) d=-1.205E-3                                         
+c (Mat. Compendium PNNL)                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+  m2  NLIB=70c PLIB=04p                                                         
+      7014  -0.755636   $ N                                                     
+      8016  -0.231475   $ O                                                     
+      18040.60c -0.012838 $ Ar-40 at 99.6035 percent of natural Ar              
+      18036.60c -0.000043 $ Ar-36 at 0.3336 percent of natural Ar               
+      18038.60c -0.000008 $ Ar-38 at 0.00629 percent of natural Ar          
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c Polyethylene d=-0.9300                                                        
+c (Mat. Compendium PNNL)                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+  m4  nlib=70c  plib=04p                                                        
+      1001 -0.143716                                                            
+      6000 -0.856284                                                            
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c Aluminum table d=-2.70                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+  m5  nlib=60c  plib=04p                                                        
+     13027     -1                                                               
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c Concrete (Mat. Compendium PNNL) d=-2.3                                        
+c (Mat. Compendium PNNL)                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+  m6  nlib=70c  plib=04p                                                        
+      1001     -0.022100                                                        
+      6000     -0.002484                                                        
+      8016     -0.574930                                                        
+     11023     -0.015208                                                        
+     12000     -0.001266                                                        
+     13027     -0.019953                                                        
+     14000     -0.304627                                                        
+     19000     -0.010045                                                        
+     20000     -0.042951                                                        
+     26000.42c -0.006435                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c 304L stainless steel dens=8.000 from PNNL-15870Rev1
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+ m8    6000  -0.000150
+     14028  -0.005000
+     15031  -0.000230
+     16032  -0.000150
+     24050  -0.007931  $-0.190000
+     24052  -0.159028
+     24053  -0.018381
+     24054  -0.004661
+     25055  -0.010000
+     26054  -0.039210  $-0.694480
+     26056  -0.638234
+     26057  -0.015001
+     26058  -0.002035
+     28058  -0.067198  $-0.100000
+     28060  -0.026776
+     28061  -0.001183
+     28062  -0.003834
+     28064  -0.001009
+     NLIB=70c                                                          
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c BK7                                                                           
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+  m9 NLIB=70c PLIB=04p                                                          
+      14028 -0.323138999                                                        
+      8016  -0.483882614                                                        
+      5011  -0.033384805                                                        
+      56138.60c -0.027496631                                                    
+      11023 -0.077153875                                                        
+      19039 -0.052216449                                                        
+      33075 -0.002726626                                                        
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c mumetal                                                                       
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+   m10 28000.50c 0.8                                     
+       42000.60c    0.05                                                        
+       14000.60c    0.005                                                       
+       29063     0.0002         nlib = 60c                                      
+       26056     0.1448         nlib = 70c 
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c PTFE  rho = 2.25 g/cm3                                                             
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+   m11 6000.70c  0.333339
+       9019.70c  0.666661
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c vinyl  rho = 1.19                                                             
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+   m12  1001.70c  .07                                      
+        6000.70c  .559                                                          
+        8016.60c  .371                                                          
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c stilbene  rho = 1.16                                                          
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+   m13  1001.70c  .4615                                           
+        6000.70c  .5385                                                         
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c wood  rho = 0.64                                                              
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+   m14  1001.70c   -0.059642                                                    
+        6000.60c   -0.497018                                                    
+        7014.70c   -0.004970                                                    
+        8016.70c   -0.427435                                                    
+       12000.60c   -0.001988                                                    
+       16000.60c   -0.004970                                                    
+       19000.60c   -0.001988                                                    
+       20000.60c   -0.001988      
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c fused silica (silicon dioxide)  rho = 2.32 g/cm3
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+   m15  8016.70c    0.666667
+       14000.70c    0.333333
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
+c Polyurethane Foam  rho = 0.021 g/cm3
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+   m16  1001.70c    0.360023
+        6000.70c    0.400878
+        7014.70c    0.076459
+        8016.70c    0.162639
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c  PYREX Glass Corning 7740
+c  (NIST p = -2.23)
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  m17  nlib=60c  plib=04p
+      5011  -0.040064
+      8016  -0.539562
+     11023  -0.028191
+     13027  -0.011644
+     14000  -0.377220
+     19000  -0.003321
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c lucite dens = 1.19
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   m18  nlib=60c  plib=04p
+     1001  -0.080538
+     6000  -0.599848
+     8016  -0.319614
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c ABS plastic dens = 1.05
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   m19  nlib=60c  plib=04p
+     1001   0.5151515
+     6000   0.4545455
+     7014   0.0303030
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c Aged WGPu (A:4-7% Pu-240) d=-19.84
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   m238  nlib=60c  plib=04p
+     94238 -0.000100
+     94239 -0.936296
+     94240 -0.059910
+     94241 -0.001997
+     94242 -0.000300
+     95241 -0.001398
+c ----------------------------------------------------------------------------
+c  Note: for mode P, only Z matters
+c ----------------------------------------------------------------------------
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c Tin  -7.31
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  m72 nlib = 80c plib = 04p
+     50000 1
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c Copper -8.96
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  m71 nlib = 80c plib = 04p
+     29000 1
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c Lead d = -11.35
+c ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  m73 nlib = 80c plib = 04p
+     82000 1
