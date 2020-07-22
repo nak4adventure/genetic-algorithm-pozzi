@@ -6,7 +6,7 @@ function [fom] = return_fom(input_file_name_Am241,input_file_name_Pu240)
 % FOM Calculation
 % =========================================================================
 
-NPS_Am241 = 1e7;
+NPS_Am241 = 1e6;
 NPS_Pu240 = 1e5;
 ArbitraryConstant = 1e-6;
 

@@ -198,7 +198,7 @@ c
       DIR = 1
  SI1 0 4.5
  SP1 -21 1
- NPS 1e7
+ NPS 1e6
  IPOL 0 1 2 0 J 1 8 100 110 120 130 140 150 160 170       
  FILES 21 DUMN1                                                                
  DBCN                                                                          

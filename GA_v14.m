@@ -30,17 +30,17 @@ working_directory = "/Users/nak4adventure/Documents/Research/GeneticAlgorithmPro
 mcnp_path = "/Users/nak4adventure/Export/my_mcnp/MCNP_CODE/bin";
 % Number of Generations
 % the first generation is produced by the Latin Hypercube Sampling Method
-N_Gen = 6;
+N_Gen = 12;
 
 % Number of Shielding Designs Tested per Generation
-N_inputFiles = 20;
+N_inputFiles = 36;
 
 % Number of Shielding Designs Performing Crossing Over Sub-Algorithm
-N_Crossover = 19;
+N_Crossover = 35;
 
 % Define max Thicknesses (cm)
-maxThicknessCopper = 1;
-maxThicknessTin    = 1;
+maxThicknessCopper = 0.3;
+maxThicknessTin    = 0.3;
 
 %% SIT BACK, RELAX, AND ENJOY THE SHOW
 
